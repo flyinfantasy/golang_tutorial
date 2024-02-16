@@ -1,0 +1,19 @@
+appname: kouyi palm treasure
+port: 8282
+logger:
+    use: zapLogger
+    environment: dev
+    loglevel: debug
+    filename: kouyi_palm_treasure.log
+db:
+    use: postgres
+    postgres:
+        enabled: true
+        host: postgres
+        port: 5432
+        userName: postgres
+        password: postgres
+        database: kouyi_palm_treasure
+contacts:
+    name: 'Felix Kuo'
+    email: felix0221@gmail.com

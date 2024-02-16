@@ -1,0 +1,37 @@
+openapi: 3.0.3
+info:
+  title: kouyi-palm-treasure API
+  description: |
+    # Features
+    - health test
+  contact:
+    name: kouyi
+  license:
+    name: MIT License
+    url: https://opensource.org/licenses/MIT
+  version: 1.0.0
+servers:
+- url: http://localhost:{port}/api
+  description: Local Development
+  variables:
+    port:
+      default: "8282"
+      enum:
+      - "8282"
+security:
+- apikey_auth: []
+tags:
+- name: health
+  description: health test
+paths:
+  /v1/health:
+    get:
+      tags:
+      - health
+      summary: Get server health status
+      description: '(description): Get all health status'
+      operationId: healthGET
+      responses:
+        "200":
+          description: Success response
+
